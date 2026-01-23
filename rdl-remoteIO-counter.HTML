@@ -1,0 +1,66 @@
+<script type="text/javascript">
+RED.nodes.registerType('rdl-remoteIO-counter',{
+    category: 'function',
+    color: '#99acdd',
+    defaults: {
+        name: { value: "" },
+        machineID: { value: "", required: true },
+        payloadIndex: { value: 0, required: true }
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "icon.svg",
+    label: function() {
+        return this.name || "remoteIO-counter";
+    }
+});
+</script>
+
+<script type="text/html" data-template-name="rdl-remoteIO-counter">
+    <div class="form-row">
+        <label for="node-input-name">
+            <i class="fa fa-tag"></i> Name
+        </label>
+        <input type="text" id="node-input-name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-machineID">
+            <i class="fa fa-cog"></i> Machine ID
+        </label>
+        <input type="text" id="node-input-machineID" placeholder="machine_01">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-payloadIndex">
+            <i class="fa fa-list"></i> Payload Index
+        </label>
+        <input type="number" id="node-input-payloadIndex">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="rdl-remoteIO-counter">
+    <p>
+        <b>Remote IO Counter</b>
+    </p>
+    <p>
+        Node ini digunakan untuk menghitung <b>rising edge</b> dari array boolean,
+        biasanya berasal dari Modbus / Remote IO.
+    </p>
+
+    <h4>Input</h4>
+    <ul>
+        <li><code>msg.payload</code> : Array boolean</li>
+        <li><code>msg.reset = true</code> : Reset counter</li>
+    </ul>
+
+    <h4>Output</h4>
+    <ul>
+        <li><code>msg.payload</code> : Nilai counter</li>
+    </ul>
+
+    <h4>Catatan</h4>
+    <p>
+        Counter disimpan di <code>flow context</code> berdasarkan Machine ID.
+    </p>
+</script>
