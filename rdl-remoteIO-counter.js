@@ -52,7 +52,7 @@ module.exports = function(RED) {
     }
 
     RED.nodes.registerType(
-        "rdl-remoteIO-counter",
+        "rdl-remoteio-counter",
         RemoteIOCounterNode
     );
 };

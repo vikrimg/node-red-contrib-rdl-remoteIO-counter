@@ -7,7 +7,7 @@
   "repository": "https://github.com/vikrimg/node-red-contrib-rdl-remoteIO-counter.git",
   "node-red": {
     "nodes": {
-      "rdl-remoteIO-counter": "rdl-remoteio-counter.js"
+      "rdl-remoteio-counter": "rdl-remoteio-counter.js"
     }
   },
   "publishConfig": {

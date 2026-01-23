@@ -1,5 +1,5 @@
 <script type="text/javascript">
-RED.nodes.registerType('rdl-remoteIO-counter',{
+RED.nodes.registerType('rdl-remoteio-counter',{
     category: 'function',
     color: '#99acdd',
     defaults: {
@@ -11,12 +11,12 @@ RED.nodes.registerType('rdl-remoteIO-counter',{
     outputs: 1,
     icon: "icon.svg",
     label: function() {
-        return this.name || "remoteIO-counter";
+        return this.name || "remoteio-counter";
     }
 });
 </script>
 
-<script type="text/html" data-template-name="rdl-remoteIO-counter">
+<script type="text/html" data-template-name="rdl-remoteio-counter">
     <div class="form-row">
         <label for="node-input-name">
             <i class="fa fa-tag"></i> Name
@@ -39,7 +39,7 @@ RED.nodes.registerType('rdl-remoteIO-counter',{
     </div>
 </script>
 
-<script type="text/html" data-help-name="rdl-remoteIO-counter">
+<script type="text/html" data-help-name="rdl-remoteio-counter">
     <p>
         <b>Remote IO Counter</b>
     </p>
