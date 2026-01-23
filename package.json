@@ -1,19 +1,16 @@
 {
-  "name": "node-red-contrib-rdl-remoteIO-counter",
+  "name": "@vikrimg/node-red-contrib-rdl-remoteio-counter",
   "version": "1.0.0",
-  "description": "Counter node for Modbus / Remote IO based on boolean edge detection",
-  "keywords": [
-    "node-red",
-    "modbus",
-    "counter",
-    "remote-io",
-    "iot"
-  ],
+  "description": "Node-RED Remote IO Counter",
+  "main": "rdl-remoteio-counter.js",
+  "license": "MIT",
+  "repository": "https://github.com/vikrimg/node-red-contrib-rdl-remoteIO-counter.git",
   "node-red": {
     "nodes": {
-      "rdl-remoteIO-counter": "rdl-remoteIO-counter.js"
+      "rdl-remoteIO-counter": "rdl-remoteio-counter.js"
     }
   },
-  "author": "Vikri Muhammad Gafar",
-  "license": "MIT"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
