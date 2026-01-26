@@ -68,7 +68,7 @@ module.exports = function (RED) {
         const changedAt = Boolean(config.changedAt);
 
         // context khusus node ini
-        const ctx = node.context();
+        const ctx = node.context().flow;
 
         node.on("input", function (msg) {
 
