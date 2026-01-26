@@ -5,7 +5,8 @@ RED.nodes.registerType('rdl-remoteio-counter',{
     defaults: {
         name: { value: "" },
         machineID: { value: "", required: true },
-        payloadIndex: { value: 0, required: true }
+        payloadIndex: { value: 0, required: true },
+        changedAt: {value: true, required: true}
     },
     inputs: 1,
     outputs: 1,
