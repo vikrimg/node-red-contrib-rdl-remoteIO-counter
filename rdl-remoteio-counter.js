@@ -65,7 +65,16 @@ module.exports = function (RED) {
 
         const machineID = String(config.machineID);
         const index = Number(config.payloadIndex || 0);
-        const changedAt = config.changedAt === true;
+        const strChangedAt = String(config.changedAt) || "true"
+
+        let changedAt;
+        if(strChangedAt === "true"){
+            changedAt = true;
+        }else{
+            changedAt = false;
+        }
+        
+
 
         // context khusus node ini
         const ctx = node.context().flow;
