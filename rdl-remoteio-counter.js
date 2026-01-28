@@ -77,7 +77,7 @@ module.exports = function (RED) {
 
 
         // context khusus node ini
-        const ctx = node.context().flow;
+        const ctx = node.context();
 
         node.on("input", function (msg) {
 
